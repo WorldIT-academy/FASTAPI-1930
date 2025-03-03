@@ -1,0 +1,20 @@
+<html lang="en">
+    <!-- Settings web page -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', path= 'css/base.css') }}">
+        <!-- name page -->
+        {% block title %} {% endblock %}
+        {% block links %} {% endblock %}
+    </head>
+    <!-- content web page -->
+    <body>
+        <a href="">Home</a>
+        <p>{{ name }}</p>
+        <img src="{{ url_for('static', path= 'icon/1.jpeg') }}" alt="">
+        {% block content %}
+            <!-- write content web page -->
+        {% endblock %}
+    </body>
+</html>
